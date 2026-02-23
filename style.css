@@ -1,0 +1,196 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --light-slate-blue-bg: hsl(252, 100%, 67%);
+  --light-royal-blue-bg: hsl(241, 81%, 54%);
+
+  --violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--pale-blue);
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  width: 600px;
+  background: var(--white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  border-radius: 15px;
+}
+.container .left-side,
+.container .right-side {
+  width: 50%;
+  padding: 20px;
+}
+.container .left-side {
+  background: linear-gradient(
+    var(--light-slate-blue-bg),
+    var(--light-royal-blue-bg)
+  );
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .left-side .text {
+  color: hsla(221, 100%, 96%, 0.8);
+  font-weight: 700;
+  font-size: 20px;
+}
+.container .left-side .circle {
+  border-radius: 50%;
+  background: linear-gradient(
+    var(--violet-blue-circle),
+    var(--persian-blue-circle)
+  );
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+}
+.container .left-side .circle .degree {
+  color: var(--white);
+  font-size: 70px;
+  font-weight: 800;
+}
+.container .left-side .circle .total {
+  color: hsla(221, 100%, 96%, 0.5);
+  font-weight: 700;
+}
+.container .left-side .condition {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 700;
+}
+.container .left-side .description {
+  color: hsla(221, 100%, 96%, 0.9);
+  max-width: 220px;
+  font-size: 16px;
+}
+.container .right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container .right-side .text {
+  color: var(--dark-gray-blue);
+  font-weight: 700;
+  font-size: 20px;
+}
+.container .right-side .subjects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .right-side .subjects .subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px;
+}
+.container .right-side .subjects .subject-card .left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.container .right-side .subjects .subject-card .degree {
+  color: var(--light-lavender);
+  font-weight: 700;
+}
+.container .right-side .subjects .subject-card .degree .special-text {
+  color: var(--dark-gray-blue);
+  margin-right: 7px;
+}
+.container .right-side .subjects .reaction .subject {
+  color: var(--light-red);
+  font-weight: 500;
+}
+.container .right-side .subjects .reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+.container .right-side .subjects .memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+.container .right-side .subjects .verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+.container .right-side .subjects .visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+.container .right-side .subjects .memory .subject {
+  color: var(--orangey-yellow);
+  font-weight: 500;
+}
+.container .right-side .subjects .verbal .subject {
+  color: var(--green-teal);
+  font-weight: 500;
+}
+.container .right-side .subjects .visual .subject {
+  color: var(--cobalt-blue);
+  font-weight: 500;
+}
+.container .right-side .continue-btn {
+  background: var(--dark-gray-blue);
+  border-radius: 25px;
+  padding: 12px;
+  color: var(--white);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  margin-top: 20px;
+  width: 100%;
+}
+.container .right-side .continue-btn:hover {
+  background: linear-gradient(
+    var(--light-slate-blue-bg),
+    var(--light-royal-blue-bg)
+  );
+}
+.attribution {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+}
+.attribution::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: -20px;
+  left: 0;
+  background: var(--violet-blue-circle);
+}
+.attribution a {
+  color: var(--dark-gray-blue);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+  color: var(--light-slate-blue-bg);
+}
